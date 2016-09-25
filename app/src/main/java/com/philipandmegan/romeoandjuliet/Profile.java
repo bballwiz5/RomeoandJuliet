@@ -75,6 +75,6 @@ public class Profile extends AppCompatActivity {
     }
 
     public String iWantMyGender() {
-        return user.getSeekingGender() == User.Gender.MAN ? "I want my Romeo to be" : "I want my Juliet to be";
+        return user.getSeekingGender() == User.Gender.MAN ?  "I want my Romeo to be" : "I want my Juliet to be";
     }
 }

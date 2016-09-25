@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class HeightAskActivity extends AppCompatActivity {
     
@@ -14,6 +15,9 @@ public class HeightAskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.user = (User) getIntent().getSerializableExtra("User");
         setContentView(R.layout.activity_height_ask);
+        String displayString = user.getSeekingGender() == User.Gender.MAN ? "I want my Romeo to be" : "I want my Juliet to be";
+        TextView g = (TextView) findViewById(R.id.iWantEdu);
+        g.setText(displayString);
     }
 
     public void continueEducation(View view) {
