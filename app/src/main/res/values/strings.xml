@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Romeo and Juliet</string>
+    <string name="app_name">Juliet <amp/> Romeo</string>
+
+    <string-array name="height">
+        <item>Short</item>
+        <item>Medium</item>
+        <item>Tall</item>
+    </string-array>
+
+    <string-array name="heightOptions">
+        <item>Taller than me</item>
+        <item>About my height</item>
+        <item>Shorter than me</item>
+        <item>I don\'t care</item>
+    </string-array>
+
 </resources>
