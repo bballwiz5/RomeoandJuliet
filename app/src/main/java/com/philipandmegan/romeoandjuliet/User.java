@@ -1,17 +1,32 @@
 package com.philipandmegan.romeoandjuliet;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
-public class User {
+public class User implements Serializable {
     public Gender iAmAGender;
     public Gender iSeekAGender;
     String zipCode;
     String birthday;
     String email;
     String password;
+    public Education myEdu;
+    public Education theirEdu;
+    public Set<Race> race;
 
     public enum Gender {
         MAN, WOMAN
+    }
+
+    public enum Education {
+        HS, BA, MA, PHD, LESSTHANHS
+    }
+
+    public enum Race {
+        AMERICAN_INDIAN, ASIAN, BLACK, WHITE, HISPANIC, PACIFIC_ISLANDER, OTHER
     }
 
     public User(Gender iAmA, Gender iSeekA) {
@@ -52,4 +67,19 @@ public class User {
         this.password = p;
     }
 
+    public void setMyEdu(Education e) {
+        this.myEdu = e;
+    }
+
+    public void setTheirEdu(Education e) {
+        this.theirEdu = e;
+    }
+
+    public void clearRace() {
+        this.race = new HashSet<Race>();
+    }
+
+    public void addRace(Race r) {
+        this.race.add(r);
+    }
 }

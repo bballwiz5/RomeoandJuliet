@@ -18,6 +18,11 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".Profile" />
         <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".GenderAskActivity" />
+        <activity android:name=".RegistrationAskActivity" />
+        <activity android:name=".HeightAskActivity" />
+        <activity android:name=".SurveyExplanationActivity" />
+        <activity android:name=".EducationAskActivity"></activity>
     </application>
 
 </manifest>

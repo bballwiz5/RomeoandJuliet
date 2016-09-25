@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="My level of education (check highest level)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" />
+
+        <CheckBox
+            android:text="High School"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/myHS"
+            android:onClick="myEducationCheckbox"/>
+
+        <CheckBox
+            android:text="Bachelors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/myBA"
+            android:onClick="myEducationCheckbox"/>
+
+        <CheckBox
+            android:text="Masters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/myMA"
+            android:onClick="myEducationCheckbox"/>
+
+        <CheckBox
+            android:text="PhD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/myPHD"
+            android:onClick="myEducationCheckbox"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/iWantEdu" />
+
+        <CheckBox
+            android:text="High School"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/theirHS"
+            android:onClick="theirEducationCheckbox"/>
+
+        <CheckBox
+            android:text="Bachelors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/theirBA"
+            android:onClick="theirEducationCheckbox"/>
+
+        <CheckBox
+            android:text="Masters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/theirMA"
+            android:onClick="theirEducationCheckbox"/>
+
+        <CheckBox
+            android:text="PhD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/theirPHD"
+            android:onClick="theirEducationCheckbox"/>
+
+        <Button
+            android:text="Continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button6"
+            android:onClick="continueRace"/>
+    </LinearLayout>
+</LinearLayout>
