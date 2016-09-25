@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">Juliet &amp; Romeo</string>
+    <string name="password_hint">password</string>
+    <string name="login_button_label">Login</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="email_hint">email@example.com</string>
+    <string name="login_error_title">Login Error!</string>
+    <string name="login_error_message">Please make sure you enter an email address and password!</string>
+    <string name="signup_error_title">Signup Error!</string>
+    <string name="signup_error_message">Please make sure you enter an email address and password!</string>
+
+    <string name="sign_up_button_label">Sign Up</string>
+    <string name="logout_button_label">Logout</string>
 
     <string-array name="height">
         <item>Short</item>

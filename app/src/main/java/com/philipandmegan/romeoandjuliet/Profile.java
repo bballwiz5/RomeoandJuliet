@@ -1,12 +1,14 @@
 package com.philipandmegan.romeoandjuliet;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Profile extends AppCompatActivity {
-
     User user = new User();
 
     @Override
