@@ -32,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
         TextView nameView = (TextView) findViewById(R.id.nameView);
         nameView.setText(mFirebaseUser.getEmail());
 
+        Button profileButton = (Button) findViewById(R.id.profileButton);
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Profile.class);
+                startActivity(intent);
+            }
+        });
+
         Button logoutButton = (Button) findViewById(R.id.logoutButton);
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override

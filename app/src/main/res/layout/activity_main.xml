@@ -22,10 +22,17 @@
         android:layout_marginTop="28dp"
         android:id="@+id/nameView" />
 
-    <Button android:id="@+id/logoutButton"
+    <Button android:id="@+id/profileButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/nameView"
         android:layout_below="@+id/nameView"
+        android:text="@string/profile_button_label"></Button>
+
+    <Button android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/profileButton"
+        android:layout_below="@+id/profileButton"
         android:text="@string/logout_button_label"></Button>
 </RelativeLayout>
