@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="I am a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7" />
+
+    <CheckBox
+        android:text="American Indian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AI"
+        android:onClick="myRaceCheckbox"/>
+
+    <CheckBox
+        android:text="Asian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AS"
+        android:onClick="myRaceCheckbox"/>
+
+    <CheckBox
+        android:text="Black or African American"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BL"
+        android:onClick="myRaceCheckbox"/>
+
+    <CheckBox
+        android:text="White or Caucasian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/WH"
+        android:onClick="myRaceCheckbox"/>
+
+    <CheckBox
+        android:text="Hispanic or Latino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LA"
+        android:onClick="myRaceCheckbox"/>
+
+    <CheckBox
+        android:text="Pacific Islander"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/PI"
+        android:onClick="myRaceCheckbox"/>
+
+    <CheckBox
+        android:text="Other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/OT"
+        android:onClick="myRaceCheckbox"/>
+
+    <Button
+        android:text="Continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button7" />
+</LinearLayout>

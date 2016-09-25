@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
+import android.content.Intent;
 
 public class Profile extends AppCompatActivity {
 
@@ -17,73 +18,61 @@ public class Profile extends AppCompatActivity {
 
     /** Called when the user touches the button */
     public void signUp(View view) {
-        setContentView(R.layout.sign_up_screen);
+        Intent toGenderActivity = new Intent(this, GenderAskActivity.class);
+        toGenderActivity.putExtra("User", user);
+        startActivity(toGenderActivity);
     }
 
     public void signIn(View view) {
         setContentView(R.layout.sign_in_screen);
     }
 
-    public void continueSignUp(View view) {
-        setContentView(R.layout.sign_up_register_page);
+    public void continueRace(View view) {
+        setContentView(R.layout.race_ask);
     }
 
-    public void iAmACheckbox(View view) {
+
+
+    public void myRaceCheckbox(View view) {
         // Is the view now checked?
         boolean checked = ((CheckBox) view).isChecked();
 
         // Check which checkbox was clicked
         switch(view.getId()) {
-            case R.id.iAmAMan:
+            case R.id.AI:
                 if (checked) {
-                    user.setIAmA(User.Gender.MAN);
+                    user.addRace(User.Race.AMERICAN_INDIAN);
                 }
                 break;
-            case R.id.iAmAWoman:
+            case R.id.AS:
                 if (checked) {
-                    user.setIAmA(User.Gender.WOMAN);
+                    user.addRace(User.Race.ASIAN);
+                }
+                break;
+            case R.id.BL:
+                if (checked) {
+                    user.addRace(User.Race.BLACK);
+                }
+                break;
+            case R.id.WH:
+                if (checked) {
+                    user.addRace(User.Race.WHITE);
+                }
+                break;
+            case R.id.LA:
+                if (checked) {
+                    user.addRace(User.Race.HISPANIC);
+                }
+                break;
+            case R.id.OT:
+                if (checked) {
+                    user.addRace(User.Race.OTHER);
                 }
                 break;
         }
     }
 
-    public void seekingACheckbox(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
-
-        // Check which checkbox was clicked
-        switch(view.getId()) {
-            case R.id.seekingAMan:
-                if (checked) {
-                    user.setISeekA(User.Gender.MAN);
-                }
-                break;
-            case R.id.seekingAWoman:
-                if (checked) {
-                    user.setISeekA(User.Gender.WOMAN);
-                }
-                break;
-        }
+    public String iWantMyGender() {
+        return user.getSeekingGender() == User.Gender.MAN ? "I want my Romeo to be" : "I want my Juliet to be";
     }
-
-    public void continueSignUpThroughRegistration(View view) {
-        EditText zipCode = (EditText) findViewById(R.id.zipCode);
-        user.setZipCode(zipCode.getText().toString());
-        EditText birthday = (EditText) findViewById(R.id.birthday);
-        user.setBirthday(birthday.getText().toString());
-        EditText email = (EditText) findViewById(R.id.email);
-        user.setEmail(email.getText().toString());
-        EditText pw = (EditText) findViewById(R.id.password);
-        user.setPassword(pw.getText().toString());
-        setContentView(R.layout.survey_intro);
-    }
-
-    public void continueSurveyIntro(View view) {
-        setContentView(R.layout.height_ask);
-        String displayString = user.getSeekingGender() == User.Gender.MAN ? "I want my Romeo to be" : "I want my Juliet to be";
-        TextView g = (TextView) findViewById(R.id.genderedString);
-        g.setText(displayString);
-    }
-
-
 }
