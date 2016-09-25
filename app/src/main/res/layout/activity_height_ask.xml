@@ -2,10 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@color/white">
     <TextView
-        android:text="Height"
+        android:text="My Heights is..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#ffff0000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
@@ -16,10 +18,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinner"
         android:layout_weight="0.31"
-        android:entries="@array/height"/>
+        android:entries="@array/height"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#ffff0000"/>
 
     <TextView
-        android:text=""
+        android:text="I want my Romeo to be..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#ffff0000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/genderedString"
@@ -38,5 +44,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/button3"
         android:layout_weight="0.03"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="#ffff0000"
         android:onClick="continueEducation"/>
 </LinearLayout>

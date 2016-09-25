@@ -48,5 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button"
-        android:onClick="continueExplanationSurvey"/>
+        android:onClick="continueExplanationSurvey"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="#ffff0000"
+        />
 </LinearLayout>
