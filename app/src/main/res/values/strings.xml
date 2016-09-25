@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Juliet <amp/> Romeo</string>
+    <string name="app_name">Juliet &amp; Romeo</string>
 
     <string-array name="height">
         <item>Short</item>
