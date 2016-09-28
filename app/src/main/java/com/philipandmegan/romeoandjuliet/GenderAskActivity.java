@@ -8,12 +8,11 @@ import android.widget.CheckBox;
 
 public class GenderAskActivity extends AppCompatActivity {
 
-    User user;
+    User user = new User();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.user = (User) getIntent().getSerializableExtra("User");
         setContentView(R.layout.activity_gender_ask);
     }
 
@@ -31,11 +30,15 @@ public class GenderAskActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.iAmAMan:
                 if (checked) {
+                    CheckBox womanBox = (CheckBox) findViewById(R.id.iAmAWoman);
+                    womanBox.setChecked(false);
                     user.setIAmA(User.Gender.MAN);
                 }
                 break;
             case R.id.iAmAWoman:
                 if (checked) {
+                    CheckBox manBox = (CheckBox) findViewById(R.id.iAmAMan);
+                    manBox.setChecked(false);
                     user.setIAmA(User.Gender.WOMAN);
                 }
                 break;

@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Profile.class);
+                Intent intent = new Intent(MainActivity.this, SurveyExplanationActivity.class);
+                User user = new User();
+                intent.putExtra("User", user);
                 startActivity(intent);
             }
         });
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadLogInView() {
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, Profile.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);

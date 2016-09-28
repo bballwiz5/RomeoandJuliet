@@ -10,7 +10,6 @@ import com.google.firebase.auth.FirebaseUser;
 import android.content.Intent;
 
 public class Profile extends AppCompatActivity {
-    User user = new User();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +20,13 @@ public class Profile extends AppCompatActivity {
     /** Called when the user touches the button */
     public void signUp(View view) {
         Intent toGenderActivity = new Intent(this, GenderAskActivity.class);
-        toGenderActivity.putExtra("User", user);
         startActivity(toGenderActivity);
     }
 
     public void signIn(View view) {
-        setContentView(R.layout.sign_in_screen);
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     public void continueRace(View view) {
@@ -35,46 +35,46 @@ public class Profile extends AppCompatActivity {
 
 
 
-    public void myRaceCheckbox(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
-
-        // Check which checkbox was clicked
-        switch(view.getId()) {
-            case R.id.AI:
-                if (checked) {
-                    user.addRace(User.Race.AMERICAN_INDIAN);
-                }
-                break;
-            case R.id.AS:
-                if (checked) {
-                    user.addRace(User.Race.ASIAN);
-                }
-                break;
-            case R.id.BL:
-                if (checked) {
-                    user.addRace(User.Race.BLACK);
-                }
-                break;
-            case R.id.WH:
-                if (checked) {
-                    user.addRace(User.Race.WHITE);
-                }
-                break;
-            case R.id.LA:
-                if (checked) {
-                    user.addRace(User.Race.HISPANIC);
-                }
-                break;
-            case R.id.OT:
-                if (checked) {
-                    user.addRace(User.Race.OTHER);
-                }
-                break;
-        }
-    }
-
-    public String iWantMyGender() {
-        return user.getSeekingGender() == User.Gender.MAN ?  "I want my Romeo to be" : "I want my Juliet to be";
-    }
+//    public void myRaceCheckbox(View view) {
+//        // Is the view now checked?
+//        boolean checked = ((CheckBox) view).isChecked();
+//
+//        // Check which checkbox was clicked
+//        switch(view.getId()) {
+//            case R.id.AI:
+//                if (checked) {
+//                    user.addRace(User.Race.AMERICAN_INDIAN);
+//                }
+//                break;
+//            case R.id.AS:
+//                if (checked) {
+//                    user.addRace(User.Race.ASIAN);
+//                }
+//                break;
+//            case R.id.BL:
+//                if (checked) {
+//                    user.addRace(User.Race.BLACK);
+//                }
+//                break;
+//            case R.id.WH:
+//                if (checked) {
+//                    user.addRace(User.Race.WHITE);
+//                }
+//                break;
+//            case R.id.LA:
+//                if (checked) {
+//                    user.addRace(User.Race.HISPANIC);
+//                }
+//                break;
+//            case R.id.OT:
+//                if (checked) {
+//                    user.addRace(User.Race.OTHER);
+//                }
+//                break;
+//        }
+//    }
+//
+//    public String iWantMyGender() {
+//        return user.getSeekingGender() == User.Gender.MAN ?  "I want my Romeo to be" : "I want my Juliet to be";
+//    }
 }
